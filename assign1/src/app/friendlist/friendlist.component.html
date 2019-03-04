@@ -1,0 +1,22 @@
+
+<table>
+  <thead>
+      <tr>
+        <th>Sr No</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let friend of friendList; let i=index">
+          <td>{{i+1}} </td>
+          <td>{{friend.name}}</td>
+          <td>{{friend.email}}</td>
+          <td>{{friend.address}}</td>
+      </tr>
+  </tbody>
+  <tfoot>
+  </tfoot>
+</table>
