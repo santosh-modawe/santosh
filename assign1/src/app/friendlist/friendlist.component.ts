@@ -16,4 +16,6 @@ export class FriendlistComponent implements OnInit {
     this.friendList=this.fs.getFriendList();
   }
 
+  
+
 }

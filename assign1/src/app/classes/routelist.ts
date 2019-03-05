@@ -1,6 +1,7 @@
   
 import { Route } from '@angular/router'
 import { FriendlistComponent } from '../friendlist/friendlist.component';
+import { AddfriendComponent } from '../addfriend/addfriend.component';
 
 export const routes:Route[]=[
      {
@@ -11,6 +12,10 @@ export const routes:Route[]=[
      {
          path:"friendlist",
          component:FriendlistComponent,
+     },
+     {
+         path:"addfriend",
+         component:AddfriendComponent
      }
      
     

@@ -1,0 +1,31 @@
+
+    <div class="container">
+         <div class="row table-header margin5px">
+          <h1> Add New Friend</h1>
+        </div>
+        <div class="row margin5px">
+          <a [routerLink]="['/friendlist']" class="btn btn-primary">Back</a>
+        </div>
+   <div class="row">
+   <div class="col-sm-8 offset-sm-2">
+      <form ngForm="form" (ngSubmit)="addfriend(form)">
+          <div class="form-group">
+            <label for="fname"> Friend Name</label>
+            <input type="text" class="form-control" id="fname"   name="fname"  placeholder="friend name">
+            
+          </div>
+          <div class="form-group">
+              <label for="femail"> Friend email</label>
+              <input type="text" class="form-control" id="femail" name="femail"  placeholder="friend email">
+              
+            </div>
+            <div class="form-group">
+                <label for="faddress"> Friend Address</label>
+                <input type="text" class="form-control" id="faddress" name="faddress"  placeholder="friend address">
+                
+              </div>
+ 
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+   </div>
+   </div>     

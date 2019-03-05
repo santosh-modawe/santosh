@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.table-header{
+    margin:auto;
+  }
+  .table-header >h1{
+    margin: auto;
+  }
+  .margin5px{
+      margin:15px;
+  }

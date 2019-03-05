@@ -1,22 +1,35 @@
 
-<table>
-  <thead>
-      <tr>
-        <th>Sr No</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Address</th>
-        <th>Action</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr *ngFor="let friend of friendList; let i=index">
-          <td>{{i+1}} </td>
-          <td>{{friend.name}}</td>
-          <td>{{friend.email}}</td>
-          <td>{{friend.address}}</td>
-      </tr>
-  </tbody>
-  <tfoot>
-  </tfoot>
-</table>
+    <div class="container">
+        <div class="row table-header margin5px">
+           <h1> Friend List</h1>
+        </div>
+        <div class="row margin5px">
+          <a [routerLink]="['/addfriend']"class="btn btn-primary">Add Friend</a>
+        </div>
+        <div class="row margin5px">
+
+                <table class="table">
+                        <thead>
+                            <tr>
+                              <th>Sr No</th>
+                              <th>Name</th>
+                              <th>Email</th>
+                              <th>Address</th>
+                              <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let friend of friendList; let i=index">
+                                <td>{{i+1}} </td>
+                                <td>{{friend.name}}</td>
+                                <td>{{friend.email}}</td>
+                                <td>{{friend.address}}</td>
+                                <td> <a [routerLink]="['editfriend']"class="btn btn-primary">Edit</a></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                      </table>
+                              
+        </div>
+    </div>

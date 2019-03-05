@@ -4,12 +4,14 @@ import {AppRoutingModule } from './app-routing.module'
 import { FriendService } from './services/friend.service'
 import { AppComponent } from './app.component';
 import { FriendlistComponent } from './friendlist/friendlist.component';
+import { AddfriendComponent } from './addfriend/addfriend.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FriendlistComponent
+    FriendlistComponent,
+    AddfriendComponent
   ],
   imports: [
     BrowserModule,
