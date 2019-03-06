@@ -24,7 +24,10 @@
                                 <td>{{friend.name}}</td>
                                 <td>{{friend.email}}</td>
                                 <td>{{friend.address}}</td>
-                                <td> <a [routerLink]="['editfriend']"class="btn btn-primary">Edit</a></td>
+                                <td> 
+                                    <a [routerLink]="['/editfriend', friend.id]"class="btn btn-primary">Edit</a>
+                                    <button class="btn btn-primary" type="button" (click)="deleteFriend(friend)">Delete</button>
+                                </td>
                             </tr>
                         </tbody>
                         <tfoot>

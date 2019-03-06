@@ -1,0 +1,47 @@
+
+    <div class="container">
+        <div class="row table-header margin5px">
+         <h1> update Friend</h1>
+       </div>
+       <div class="row margin5px">
+         <a [routerLink]="['/friendlist']" class="btn btn-primary">Back</a>
+       </div>
+  <div class="row">
+  <div class="col-sm-8 offset-sm-2">
+     <form  #form="ngForm" (ngSubmit)="editFriend(form)">
+        <input  type="hidden"  [(ngModel)]="fdata.id" name="id" >
+         <div class="form-group">
+           <label for="fname"> Friend Name</label>
+           <input   type="text" required  [(ngModel)]="fdata.name" #fname="ngModel" class="form-control" id="fname"   name="name"  placeholder="friend name">
+               <div *ngIf="fname.touched && !fname.valid"  class="alert alert-danger" role="alert">
+                 <div >
+                    Name is required
+                 </div>
+               </div>
+         </div>
+         <div class="form-group">
+             <label for="femail"> Friend email</label>
+             <input  [(ngModel)]="fdata.email" type="text" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" ngModel #femail="ngModel" class="form-control" id="femail" name="email"  placeholder="friend email">
+             <div *ngIf="femail.touched && !femail.valid" class="alert alert-danger" role="alert">
+                 <div *ngIf="femail.errors.required">
+                  Email is required
+                 </div>
+                 <div *ngIf="femail.errors.pattern">
+                  Invalid email
+                   </div>
+             </div>
+           </div>
+           <div class="form-group">
+               <label for="faddress"> Friend Address</label>
+               <input  [(ngModel)]="fdata.address" required type="text"  ngModel #faddress="ngModel" class="form-control" id="faddress" name="address"  placeholder="friend address">
+               <div  *ngIf="faddress.touched && !faddress.valid" class="alert alert-danger" role="alert">
+                   <div >
+                     Address is required
+                   </div>
+                 </div>
+           </div>
+
+         <button type="submit" [disabled]="!form.valid"class="btn btn-primary">Update</button>
+       </form>
+  </div>
+  </div>     
