@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+ul{
+    list-style: none;
+}
+.thumbnail{
+     float:left;
+     width: 200px;
+     height: 200px;
+     margin: 2px;
+     background:url("assets/loader.gif") no-repeat center center;
+
+}
+.thumbnail >img {
+    height:100%;
+    width:100%;
+}
+.margin5px{
+    margin:5px
+}
+.large-view{
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background:white;
+  margin: auto
+}
+.large-view > img{
+    width: 85%;
+    height: 85%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.image-large-wrapper{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image:url("assets/back.png");
+  top:0;
+
+  display: flex;
+}
+
+#closebtn{
+  position: absolute;
+  color:white;
+  top:20px;
+  right:20px;
+  cursor: pointer;
+  height: 20px;
+  width:20px;
+}

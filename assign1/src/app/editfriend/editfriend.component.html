@@ -21,7 +21,7 @@
          </div>
          <div class="form-group">
              <label for="femail"> Friend email</label>
-             <input  [(ngModel)]="fdata.email" type="text" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+" ngModel #femail="ngModel" class="form-control" id="femail" name="email"  placeholder="friend email">
+             <input  [(ngModel)]="fdata.email" type="text" required P ngModel #femail="ngModel" class="form-control" id="femail" name="email"  placeholder="friend email">
              <div *ngIf="femail.touched && !femail.valid" class="alert alert-danger" role="alert">
                  <div *ngIf="femail.errors.required">
                   Email is required
